@@ -5,7 +5,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 
 const SignupForm = () => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState('Offer Terms');
   const [formData, setFormData] = useState({
     fullName: '',
     address: '',
@@ -13,7 +13,7 @@ const SignupForm = () => {
     state: '',
     phoneNumber: '',
     dateOfBirth: '',
-    gender: '',
+    gender: 'male',
     email: '',
   });
   const [errors, setErrors] = useState({});
@@ -263,7 +263,7 @@ const SignupForm = () => {
         onChange={handleChange2}
       >
   
-        <MenuItem value="option1">Option 1</MenuItem>
+        <MenuItem value="Offer Terms">Offer Terms</MenuItem>
         <MenuItem value="option2">Option 2</MenuItem>
         <MenuItem value="option3">Option 3</MenuItem>
       </Select>
