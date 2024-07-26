@@ -50,12 +50,23 @@ const SignupForm = () => {
   };
   
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'sans serif' }}>
+    <Box sx={{display:'flex', flexDirection:{xs:'column',sm:"column",md:'row',lg:'row',xl:'row'},alignItems:'center',justifyContent:'center',width:'100%'}}>
+   <Box sx={{height:{xs:'450px',sm:'450px',md:'800px',lg:'800px',xl:'800px'},maxWidth:'500px',width:'100%'}}>
+      <img
+        style={{ width: '100%',height:'100%' }}
+        alt="Descriptive"
+        src="https://img.freepik.com/free-photo/sign-up-form-button-graphic-concept_53876-101286.jpg?t=st=1722021464~exp=1722025064~hmac=30093e2380d73d78f3e9df142cc4a16024b7a5f156d03c2a7664d3b59242aef2&w=740"/>
+ </Box>
+    <Box sx={{ display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center', fontFamily: 'sans serif', gap:'40px',padding:'10px',maxWidth:'500px',width:'100%' }}>
+      <Box sx={{display:'flex',justifyContent:'space-between',width:'100%'}}>
+        <Typography sx={{fontSize:'16px',fontWeight:'bold',color:'green'}}>Quality Health</Typography>
+        <Button sx={{padding:'3px 5px',fontSize:'12px',color:'green',borderColor:"green"}} variant="outlined">How it Works</Button>
+      </Box>
       <Box
         component="form"
         noValidate
         autoComplete="off"
-        sx={{ width: 500, display: 'flex', flexDirection: 'column', gap: '10px', padding: '10px', alignItems: 'center', boxSizing: 'border-box' }}
+        sx={{ maxWidth: '400px', width:'100%', display: 'flex', flexDirection: 'column', gap: '10px', padding: '10px', alignItems: 'center', boxSizing: 'border-box' }}
         onSubmit={handleSubmit}
       >
         <Typography sx={{ color: '#242633', fontWeight: 'bold' }} variant="h4" component="h1" gutterBottom>
@@ -249,8 +260,8 @@ const SignupForm = () => {
           <MailIcon />
           <Typography>Continue with email</Typography>
         </Button>
-        <Box sx={{display:'flex',alignItems:'center',gap:'3px'}}>
-          <Typography sx={{ color: 'grey' }}>By Signing up, I agree to the </Typography>
+        <Box sx={{display:'flex',alignItems:'center',gap:'2px'}}>
+          <Typography sx={{ color: 'grey' }}>By Signing up, I agree to the</Typography>
       <Select
         id="mui-simple-select"
         value={selectedOption}
@@ -258,7 +269,7 @@ const SignupForm = () => {
           '& .MuiOutlinedInput-notchedOutline': {
             border:'none',
           },
-        
+          color:'green'
         }}
         onChange={handleChange2}
       >
@@ -269,6 +280,7 @@ const SignupForm = () => {
       </Select>
         </Box>
       </Box>
+    </Box>
     </Box>
   );
 };
